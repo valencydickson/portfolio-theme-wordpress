@@ -42,16 +42,14 @@
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/51416ae4aa.js" crossorigin="anonymous"></script>
 
-  <!-- CSS Links -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/media-style.css" />
+  <?php wp_head();?>
 </head>
 
 <body>
 <header id="header">
     <div class="navbar">
       <a href="/" class="logo">
-        <img src="images/logo.svg" alt="logo" />
+      <img src="<?php echo get_theme_file_uri('assets/images/logo.svg') ?>" alt="logo" />
       </a>
 
       <nav class="navigation">
