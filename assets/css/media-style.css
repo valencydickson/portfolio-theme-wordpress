@@ -19,24 +19,28 @@
     display: flex;
   }
 
-  .navigation ul {
+  .menu-wrapper {
     display: flex;
     justify-content: space-between;
   }
 
-  .navigation li {
+  .menu-item {
     margin-left: 2.5em;
   }
 
-  .navigation a,
+  .current-menu-item {
+    color: var(--primaryColor);
+  }
+
+  .menu-item a,
   .footer-nav a {
     color: rgba(4, 194, 201, 1);
-    transition: var(-);
+    transition: var(--transition);
     text-transform: uppercase;
     font-size: 0.85rem;
   }
 
-  .nav-link:after {
+  .menu-item a:after {
     content: "";
     display: block;
     margin: 0 auto;
@@ -47,8 +51,8 @@
     transition: var(--transition);
   }
 
-  .nav-link:hover.nav-link:after {
-    opacity: 1;
+  .menu-item a:hover.menu-item a:after {
+    opacity: 1 !important;
   }
 
   .personal-contacts {

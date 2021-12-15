@@ -53,7 +53,18 @@
       </a>
 
       <nav class="navigation">
-        <ul>
+      <?php
+wp_nav_menu(
+    array(
+        'theme_location' => 'primary',
+        'menu-class' => 'menu-wrapper-li',
+        'items_wrap' => '<ul  class="menu-wrapper">%3$s</ul>',
+        'fallback_cb' => false,
+    )
+);
+?>
+
+        <!-- <ul>
           <li>
             <a class="nav-link" href="/">Home</a>
           </li>
@@ -64,9 +75,12 @@
             <a class="nav-link" href="#projects">Projects</a>
           </li>
           <li>
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li>
             <a class="nav-link" href="#contacts">Contacts</a>
           </li>
-        </ul>
+        </ul> -->
       </nav>
 
       <!-- Contacts -->
@@ -98,6 +112,9 @@
             <li>
               <a class="nav-link" href="#projects">Projects</a>
             </li>
+            <li>
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
             <li>
               <a class="nav-link" href="#contacts">Contacts</a>
             </li>

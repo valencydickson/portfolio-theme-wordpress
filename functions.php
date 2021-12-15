@@ -7,8 +7,8 @@ function portfolio_setup()
 
     //Navigation Menu
     register_nav_menus(array(
-        'primary' => __('Primary Menu', 'myfirsttheme'),
-        'secondary' => __('Secondary Menu', 'myfirsttheme'),
+        'primary' => __('primary-menu', 'portfolio'),
+        'secondary' => __('secondary-menu', 'portfolio'),
     ));
 
 }
@@ -18,8 +18,7 @@ add_action("after_setup_theme", "portfolio_setup");
 function add_theme_scripts()
 {
     // Add stylesheets
-    echo "Hello";
-    wp_enqueue_style('style', get_stylesheet_uri());
+
     wp_enqueue_style('app', get_template_directory_uri() . '/assets/css/app.css');
     wp_enqueue_style('media-style', get_template_directory_uri() . '/assets/css/media-style.css');
 
