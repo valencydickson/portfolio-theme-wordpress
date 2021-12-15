@@ -36,9 +36,6 @@ ul {
 
 /* ***** HEADER ***** */
 
-header {
-  height: 100vh;
-}
 
 .navbar {
   background: var(--bgColor);
@@ -155,6 +152,8 @@ header {
 }
 
 /* Introduction */
+
+
 
 .intro {
   width: min(90%);

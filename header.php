@@ -64,24 +64,9 @@ wp_nav_menu(
 );
 ?>
 
-        <!-- <ul>
-          <li>
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#testimonials">Testimonials</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#contacts">Contacts</a>
-          </li>
-        </ul> -->
+
       </nav>
+
 
       <!-- Contacts -->
       <div class="personal-contacts">
@@ -96,29 +81,22 @@ wp_nav_menu(
       <div class="sidebar">
         <div class="sidebar-header">
           <a href="index.html" class="logo">
-            <img src="images/logo.svg" alt="logo" />
+            <img src="<?php echo get_theme_file_uri('assets/images/logo.svg') ?>" alt="logo" />
           </a>
           <button class="close-btn"><i class="fas fa-times"></i></button>
         </div>
 
         <nav id="toggle-nav" class="toggle-nav">
-          <ul>
-            <li>
-              <a class="nav-link" href="#intro">Home</a>
-            </li>
-            <li>
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li>
-              <a class="nav-link" href="#projects">Projects</a>
-            </li>
-            <li>
-            <a class="nav-link" href="#testimonials">Testimonials</a>
-          </li>
-            <li>
-              <a class="nav-link" href="#contacts">Contacts</a>
-            </li>
-          </ul>
+      <?php wp_nav_menu(
+    array(
+        'theme_location' => 'primary',
+        'menu-class' => 'menu-wrapper-li',
+        'items_wrap' => '<ul  class="menu-wrapper">%3$s</ul>',
+        'fallback_cb' => false,
+    )
+);
+?>
+
         </nav>
 
         <!-- social media -->

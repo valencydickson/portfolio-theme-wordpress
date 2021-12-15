@@ -23,7 +23,7 @@ function add_theme_scripts()
     wp_enqueue_style('media-style', get_template_directory_uri() . '/assets/css/media-style.css');
 
     //Add script
-    wp_enqueue_script('app', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), true);
+    wp_enqueue_script('app', get_template_directory_uri() . '/assets/js/app.js', array('jquery'), null, true);
 }
 
 add_action('wp_enqueue_scripts', 'add_theme_scripts');

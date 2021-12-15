@@ -5,23 +5,16 @@
       <img src="<?php echo get_theme_file_uri('assets/images/logo.svg') ?>" alt="logo" />
       </a>
       <nav class="footer-nav">
-        <ul>
-          <li>
-            <a class="nav-link" href="#intro">Home</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#testimonials">Testimonials</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#contacts">Contacts</a>
-          </li>
-        </ul>
+      <?php
+wp_nav_menu(
+    array(
+        'theme_location' => 'primary',
+        'menu-class' => 'menu-wrapper-li',
+        'items_wrap' => '<ul  class="menu-wrapper">%3$s</ul>',
+        'fallback_cb' => false,
+    )
+);
+?>
       </nav>
     </div>
 
@@ -34,7 +27,7 @@
       </div>
 
       <div class="copyright">
-        <p class="ml-auto">VALENCY DICKSON <span class="year">©2020</span></p>
+        <p class="ml-auto">VALENCY DICKSON <span class="year"></span></p>
       </div>
     </div>
   </footer>
@@ -49,10 +42,9 @@
 </script>
 
 <!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-<!-- Main Js -->
-<script src="js/index.js"></script>
+
 
 <script>
   //Testimonials carousel
